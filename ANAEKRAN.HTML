@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEMEK CEPTE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .yemekListesi {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .tarif {
+            flex: 2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        li:hover {
+            background-color: #f0f0f0;
+        }
+        #arama {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .tarifContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="yemekListesi">
+            <h1>YEMEK CEPTE</h1>
+            <input type="text" id="arama" onkeyup="aramaYap()" placeholder="Yemek ara...">
+            <ul>
+                <li class="yemek" data-tarif="mercimekCorbasi">
+                    <img src="mercimek.jfif" alt="Mercimek Çorbası">
+                    Mercimek Çorbası
+                </li>
+                <li class="yemek" data-tarif="tavukSote">
+                    <img src="download.jpg" alt="Tavuk Sote">
+                    Lokanta Usulü Terbiyeli Tavuk Çorbası
+                </li>
+                <li class="yemek" data-tarif="sebzeliMakarna">
+                    <img src="makarma sebze.jfif" alt="Sebzeli Makarna">
+                    Sebzeli Makarna
+                </li>
+                <li class="yemek" data-tarif="kısır">
+                    <img src="kisir1-450x337.webp" alt="kısır">
+                    kısır
+                </li>
+                <!-- Daha fazla yemek adı ve resmi ekleyebilirsin -->
+            </ul>
+        </div>
+        <div class="tarif" id="tarifAlanı">
+            <div id="mercimekCorbasiContent" class="tarifContent">
+
+                <h2>Mercimek Çorbası</h2>
+                <ul>
+                    <li>1 su bardağı kırmızı mercimek</li>
+                    <li>1 adet soğan</li>
+                    <li>1 adet havuç</li>
+                    <li>1 yemek kaşığı tereyağı</li>
+                    <li>6 su bardağı su veya et suyu</li>
+                    <li>Tuz, karabiber</li>
+                    <li>1 tatlı kaşığı kırmızı pul biber (isteğe bağlı)</li>
+                    <li>Yarım limonun suyu</li>
+                </ul>
+                <p>Mercimekler yıkanır ve süzülür. Soğan ve havuç küçük küçük doğranır. Tencerede tereyağı eritilir. Soğan ve havuçlar kavrulur. Mercimekler eklenir ve kavurmaya devam edilir. Üzerine su veya et suyu eklenir. Tuz ve karabiber ilave edilir. Mercimekler yumuşayana kadar pişirilir. Blendırdan geçirilir. Servis yapmadan önce limon suyu eklenir.</p>
+            </div>
+            <div id="tavukSoteContent" class="tarifContent">
+                <h2>Lokanta Usulü Terbiyeli Tavuk Çorbası</h2>
+            <ul>
+              <li>2 adet haşlanmış tavuk budu</li>
+               <li>3 yemek kaşığı şehriye</li>
+               <li>2 yemek kaşığı zeytinyağ</li>
+                <li>2 yemek kaşığı yoğurt</li>
+                <li>1.5 yemek kaşığı un</li>
+                <li>1 adet yumurtanın sarısı</li>
+                <li>2 diş rendelenmiş sarımsak</li>
+                <li>1/2 (yarım) adet limon </li>
+                <li>1 çay kaşığı karabiber></li>
+                <li>1 tatlı kaşığı tuz</li>
+                 <li> 8-9 su bardağı su (tavuğun kendi suyunu da kullanıyoruz)</li>
+    
+            </ul>
+            <p>Önce tavukları haşlıyoruz.
+                Terbiyesini hazırlıyoruz un,yoğurt,yumurtayı bir kapta çırpıyoruz.
+                İçine yarım su bardağı su ilave edip iyice pütürsüz olacak şekilde çırpıyoruz.
+                Haşlanmış tavuğun suyundan sıcak olarak içine üç kepçe kadar alıp terbiyeyisine ilave edip iyice çırpıyoruz.
+                Çorbayı hazırlayacağım tencereye sıvı yağ ilave ediyoruz şehriyeyi hafif rengi dönmeden kavuruyoruz.
+                Sarımsağı rendeleyip içine ilave ediyoruz suyunu ilave ediyoruz.
+                Parçalanmış tavukları ilave ediyoruz bir taşım hepsini kaynatıyoruz.
+                Çorbanın içine terbiyesini ilave ediyoruz bir taşım kaynatıyoruz.
+                İçine yarım sıkılmış limon suyunu ve tuzunu ilave ederek çorbamızı bir taşım daha kaynatıyoruz. Kıvam alınca ocağı kapatıyoruz.
+                Üzerine tereyağ ve kırmızı biber kavurup servise sunuyoruz. Afiytle.
+                </p>
+            </div>
+            <div id="sebzeliMakarnaContent" class="tarifContent">
+                <h2>Sebzeli Makarna</h2>
+                <ul>
+              <li>1paketsebzeli burgu makarna</li>
+              <li>2 litre su</li>
+              <li>1 tatlı kaşığı tuz </li>
+                <li>1 adet orta boy patlıcan </li>
+               <li> 1 adet orta boy kabak   </li>
+                   <li>1 adet dolmalık yeşil biber</li>
+                   <li>1 adet kırmızı kapya biber</li>
+                     <li>1 adet sarımsak</li>
+                     <li> 3 yemek kaşığı sıvı yağ</li>
+                </ul>
+                <p>Öncelikle suyu ve tuzu kaynatıp makarnayı haşlayalım.Tereyağını küçük bir sos tavasında eritelim. Haşlanan makarnayı süzelim ve eriyen yağı makarnaya ekleyip karıştıralım.
+                    Patlıcanları, biberleri ve kabakları julyen doğrayalım. Sarımsakları da rendeleyelim. Geniş bir tavaya sıvı yağı ve sarımsakları koyup kavuralım.
+                    Patlıcanları ilave edip rengi dönene kadar soteleyelim. Patlıcanlar kızarmaya başlayınca kabakları ekleyelim ve kabaklar yumuşayana kadar sotelemeye devam edelim.
+                    Son olarak biberleri de ekleyelim ve 5 dakika daha soteleyelim. Sebzeler makarnanın üzerine dökelim ve harmanlayalım. Sıcak olarak servis edelim.</p>
+            </div>
+            <div id="kısırContent" class="tarifContent">
+                <h2>KISIR</h2>
+                <ul>
+              <li>1,5 su bardağı ince bulgur</li>
+              <li>1,5 su bardağı su</li>
+              <li>1 yemek kaşığı domates salças </li>
+                <li> 1 yemek kaşığı biber salçası</li>
+               <li> 1 tatlı kaşığı toz kırmızı biber </li>
+               <li>  4-5 sap taze soğan (isteğe bağlı)  </li>
+                   <li> 2 adet domates</li>
+                   <li> 1 avuç kıyılmış maydanoz</li>
+                     <li> 1 avuç kıyılmış dereotu</li>
+                     <li> 1 tatlı kaşığı sumak</li>
+                     <li>1 tatlı kaşığı nane</li>
+                     <li>1 tatlı kaşığı kekik</li>
+                     <li>1 fincan sıvı yağ</li>
+                     <li>Tuz</li>
+                     <li>Nar ekşisi.</li>
+                </ul>
+                <p>Hazırlanışı
+                    Bulguru yıkayıp bir tencereye alın ve suyu ekleyin,
+                    İstediğiniz miktarda tuz  ve 1 yemek kaşığı kadar zeytinyağ katıp kapağını kapatın ve ocağın altını en düşük seviyeye getirin,
+                    Bulgurlar suyunu çekince altını kapatıp kapağı kapalı biçimde 20 dk. kadar dinlendirin,
+                    Sıvıyağı kızdırıp içine salçaları ve toz biberi ekleyip kavurun,
+                    Salçalı karışımı bulgura ekleyip karıştırın,
+                    Baharatlarını da ekleyip karıştırın,
+                    Yeşillikleri doğrayıp bulgura katıp karıştırın,
+                    Salatalık ve domatesi küp küp doğrayıp servisten hemen önce ekleyip karıştırın,
+                    Bol nar ekşisiyle servis yapın.  Afiyet olsun...
+
+                    </p>
+            </div> 
+        </div>
+
+
+    </div>
+
+    <script>
+        var yemekListesi = document.querySelectorAll('.yemek');
+        var tarifAlanı = document.getElementById('tarifAlanı');
+
+        yemekListesi.forEach(function(yemek) {
+            yemek.addEventListener('click', function() {
+                var tarifId = this.getAttribute('data-tarif');
+                tarifGoster(tarifId);
+            });
+        });
+
+        function tarifGoster(tarifId) {
+            var tarifler = document.querySelectorAll('.tarifContent');
+            for (var i = 0; i < tarifler.length; i++) {
+                tarifler[i].style.display = 'none';
+            }
+            document.getElementById(tarifId + 'Content').style.display = 'block';
+            tarifAlanı.style.display = 'block';
+        }
+
+        function aramaYap() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('arama');
+            filter = input.value.toUpperCase();
+            ul = document.querySelector(".yemekListesi ul");
+
+            li = ul.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
